@@ -1,6 +1,6 @@
 let signBtn = document.getElementById("signBtn");
 let model = document.querySelector(".model");
-let gradeBtn = document.getElementById("gradeBtn");
+
 let collageModel = document.querySelector(".collage-model");
 // show Model
 let showModel = () => {
@@ -18,7 +18,8 @@ let hideModel=()=> {
     collageModel.style.display= 'none';
 };
 signBtn.addEventListener("click",showModel);
-if(window.location.pathname=='/index.html') {
+if(window.location.pathname=='/index.html'||window.location.pathname=='/about.html') {
+    let gradeBtn = document.getElementById("gradeBtn");
     gradeBtn.addEventListener("click",showModel);
 }
 
