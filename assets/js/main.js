@@ -18,9 +18,9 @@ let hideModel=()=> {
     collageModel.style.display= 'none';
 };
 signBtn.addEventListener("click",showModel);
-if(window.location.pathname=='/index.html'||window.location.pathname=='/about.html') {
+
     let gradeBtn = document.getElementById("gradeBtn");
     gradeBtn.addEventListener("click",showModel);
-}
+
 
 
