@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <!--Bootstrap File-->
+    <link
+      rel="stylesheet"
+      href="./assets/vendors/bootstrap/css/bootstrap.min.css"
+    />
+    <!--font Awsome library-->
+    <link rel="stylesheet" href="./assets/vendors/fonts/all.min.css" />
+    <!--Css File-->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>aboutUs</title>
+    <link rel="icon" href="./assets/img/logo.png" type="image/x-icon">
+</head>
+<body>
+    <div class="collage-model " dir="rtl">
+      
+        <div class="card p-4">
+          <div class="row">
+            <div class="col-lg-6 col-12 mb-3 mb-lg-0 colR">
+              <div class="box">
+                <div class="arrow" onclick="hideModel()" style="cursor: pointer;">
+                  <img src="./assets/img/modelArrow.png" alt="arrowImage">
+                </div>
+                <div class="text">
+                  <h3> الكلية والتخصص</h3>
+                </div>
+                <div class="inputs">
+                  <select class="form-select mb-4" id="collageSeclection">
+                    <option selected>اختر الكلية</option>
+                    <option value="كلية علوم الحاسب">كلية علوم الحاسب</option>
+                    <option value="كلية الهندسة">كلية الهندسة</option>
+                    <option value="كلية الذكاء الاصطناعي">كلية الذكاء الاصطناعي</option>
+                  </select>
+                  <select class="form-select mb-4" id="departmentSelection">
+                    <option selected>اختر القسم - التخصص</option>
+                    <option value="تطوير البرمجيات">تطوير البرمجيات</option>
+                    <option value="ذكاء اصطناعي">ذكاء اصطناعي</option>
+                    <option value="شبكات">شبكات</option>
+                  </select>
+                  <input type="text" class="form-control mb-4" placeholder="رقم الجلوس" id="passcode">
+                  <button class="btn btn-warning"> المتابعة</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 col-12 colL">
+                <div class="card-img">
+                  <img src="./assets/img/signInModel.png" alt="modelImage" class="img-fluid float-start">
+                </div>
+            </div>
+            
+          </div>
+        </div>
+    
+    </div>
+    <div class="model " dir="rtl">
+      
+        <div class="card p-4">
+          <div class="row">
+            <div class="col-lg-6 col-12 mb-3 mb-lg-0 colR">
+              <div class="box">
+                <div class="arrow" onclick="hideModel()" style="cursor: pointer;">
+                  <img src="./assets/img/modelArrow.png" alt="arrowImage">
+                </div>
+                <div class="text">
+                  <h3>تسجيل الدخول</h3>
+                  <p>من فضلك قم بإدخال البيانات المطلوبة منك لإستكمال تسجيل الدخول ومعرفة الدرجات والتقديرات الخاصة بك في الجامعة</p>
+                </div>
+                <div class="inputs">
+                  <input type="text" class="form-control mb-4" placeholder="الرقم القومي" id="ID">
+                  <input type="text" class="form-control mb-4" placeholder="الرقم الجامعي" id="universityID">
+                  <button class="btn btn-warning" id="collageBtn" onclick="showCollageModel()">تسجيل الآن</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 col-12 colL">
+                <div class="card-img">
+                  <img src="./assets/img/signInModel.png" alt="modelImage" class="img-fluid float-start">
+                </div>
+            </div>
+            
+          </div>
+        </div>
+    
+    </div>
+    <div class="content" dir="rtl">
+        <!--Navbar-->
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="./index.html"
+              ><img src="./assets/img/logo.png" alt="logo"
+            /></a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link " href="./index.html">الرئيسية</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./news.html">الاخبار</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./index.html#services">خدماتنا</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./index.html#sectors">قطاعتنا</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./index.html#seminars">الندوات</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="#">من نحن</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#contact">اتصل بنا</a>
+                </li>
+              </ul>
+              <div class="btnContainer me-auto">
+                <button href="#" class="btn btn-warning" id="signBtn">تسجيل الدخول</button>
+                <a href="#" class="btn btn-outline-primary">عضو جديد</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <!--About Landing-->
+      <section class="aboutLanding">
+        <div class="container">
+            <div class="row justify-content-around align-items-center">
+                <div class="col-lg-4 col-12">
+                    <div class="aboutLImg">
+                        <img src="./assets/img/aboutLanding.png" alt="aboutImg" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-7 col-12">
+                    <div class="aboutImg1">
+                        <img src="./assets/img/Group 39.png" alt="aboutImg1">
+                    </div>
+                    <div class="landingText">
+                        <h3>SMART <span>GATE</span></h3>
+                        <p>تعد شركة سمارت جيت من الشركات الرائدة في صناعة الأفكار الإبداعية والمبتكرة لعملاها حيث تمنح فرصاً فريدة للعملاء للحصول علي حلول متكاملة من مصدر واحد
+                            وذلك بتطبيق حلول تقنية متكاملة وبطريقة تهدف لزيادة وسرعة الانتاجية والربحية
+                            وبالمشاركة مع شركتنا تصبح الفرصه مواتيه للفوز بعمق التجربة والحلول التقنية الأبعد بكثير من الخبرة المحلية لخدماتنا التي تتضمن تصميم وتطبيق الشبكات السلكية
+                            واللاسلكية وتجهيز الاجهزة ومستلزماتها وملحقاتها لكل الاصناف المعروفة والمتناسقة اللازمة لتطوير البرامج والحلول المتكاملة
+                            والاستشارات التقنية والمعلوماتية وتصميم المواقع والبرمجيات والتدريب والصيانة وادارة النظم بشكل عام</p>
+                    </div>
+                    <div class="aboutImg2">
+                        <img src="./assets/img/Group 40.png" alt="aboutImg">
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+      <!--Point of view of company-->
+      <section class="company">
+        <div class="container">
+            <div class="row">
+                <h2 class="main-title">من نحن</h2>
+            </div>
+            <div class="row justify-content-around align-items-center">
+                <div class="col-12 col-lg-7 comCol">
+                    <div class="vision">
+                        <div class="visionImg">
+                            <img src="./assets/img/vision.png" alt="visionImg">
+                        </div>
+                        <div class="visionText">
+                            <h2>رؤية الشركة</h2>
+                            <p>الأفكار المبدعه والمبتكرة هي طريقنا لبناء علاقتنا مع العميل كفريق عمل واحد بداية من العمل سوياً ثم التشغيل والإدارة نعمل معا ننجح معا - وذلك عن طريق تقديم المنتجات والخدمات ذات الجوده العالية في مجال تكنولوجيا المعلومات لتطوير البرامج والبنية التحتية اللازمة من أجهزة وشبكات وبرمجيات لتطوير الأداء لدي العملاء</p>
+                        </div>
+                    </div>
+                    <div class="mission">
+                        <div class="missionImg">
+                            <img src="./assets/img/mission.png" alt="missionImg">
+                        </div>
+                        <div class="missionText">
+                            <h2>مهمة الشركة </h2>
+                            <p>مهمتنا المشاركة مع عملائنا لنجعلهم أكثر تنافسية وكفاءه وأكثر فاعلية والمساهمه في استقرارهم بمواقعهم بالسوق والسعى للتقدم والنمو فى مجالات أعمالهم</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4 comCol">
+                    <div class="companyImg">
+                        <img src="./assets/img/companyImg.png" alt="companyImg" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+      <!--Team-->
+      <section class="team">
+        <div class="container">
+            <div class="row">
+                <h2 class="main-title"> فريقنا</h2>
+            </div>
+            <div class="row">
+                <div class="col-12 col-lg-3 col-md-6 mb-4">
+                    <div class="card  p-3">
+                        <div class="card-img ">
+                            <img src="./assets/img/emp2.jpg" alt="leader" class="img-fluid">
+                        </div>
+                        <div class="card-title">
+                            <h3>رجب علي</h3>
+                           <small>المدير العام </small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-3 col-md-6 mb-4">
+                    <div class="card  p-3">
+                        <div class="card-img ">
+                            <img src="./assets/img/emp1.avif" alt="leader" class="img-fluid">
+                        </div>
+                        <div class="card-title">
+                            <h3>أحمد مدحت</h3>
+                           <small>المدير التنفيذي</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-3 col-md-6 mb-4">
+                    <div class="card  p-3">
+                        <div class="card-img ">
+                            <img src="./assets/img/emp2.jpg" alt="leader" class="img-fluid">
+                        </div>
+                        <div class="card-title">
+                            <h3> خالد السعيد</h3>
+                           <small> المساعد التنفيذي</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-3 col-md-6 mb-4">
+                    <div class="card  p-3">
+                        <div class="card-img ">
+                            <img src="./assets/img/emp1.avif" alt="leader" class="img-fluid">
+                        </div>
+                        <div class="card-title">
+                            <h3>سالم أحمد</h3>
+                           <small>مسؤول التسويق</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+        <!--Footer-->
+        <footer >
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 col-md-6 mb-lg-0 mb-5 text-center col-12">
+              <div class="footerLogo">
+                <div class="img">
+                  <img src="./assets/img/logo.png" alt="logo">
+                </div>
+                <address><i class="fa-solid fa-location-dot"></i>عقار رقم 9 شارع حسن افلاطون ارض الجولف – مدينة نصر</address>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-lg-0 mb-5 text-center col-12">
+              <div class="links">
+                <ul>
+                  <li><a href="./index.html">الرئيسية</a></li>
+                  <li><a href="./index.html#services">خدماتنا</a></li>
+                  <li><a href="./index.html#sectors">قطاعتنا</a></li>
+                  <li><a href="./index.html#seminars">الندوات</a></li>
+                  <li><a href="#">من نحن</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-lg-0 mb-5 text-center col-12">
+              <h3 class="text-white"> تواصل معنا عبر</h3>
+              <div class="phone1">
+                <i class="fa-solid fa-mobile-screen-button"></i>  01069673344
+              </div>
+              <div class="phone2">
+                <i class="fa-solid fa-phone"></i> 0224199056
+              </div>
+              <div class="mail">
+                <i class="fa-solid fa-envelope"></i> info@smart-gate.net
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-lg-0 mb-5 text-center col-12">
+              <h3 class="text-white mb-3">تابعنا عبر</h3>
+              <div class="social">
+                <i class="fa-brands fa-youtube"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-facebook"></i>
+              </div>
+                <div class="con">
+                  <input type="text" class="form-control" placeholder="بريدك الإلكتروني" id="subscribe" >
+                <button class="btn btn-warning w-100">أشترك الآن</button>
+                </div>
+            </div>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    
+    <script src="./assets/vendors/bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</body>
+</html>

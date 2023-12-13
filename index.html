@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Google Fonts-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <!--Bootstrap File-->
+    <link
+      rel="stylesheet"
+      href="./assets/vendors/bootstrap/css/bootstrap.min.css"
+    />
+    <!--font Awsome library-->
+    <link rel="stylesheet" href="./assets/vendors/fonts/all.min.css" />
+    <!--Css File-->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="icon" href="./assets/img/logo.png" type="image/x-icon">
+    <title>Smart Gate</title>
+  </head>
+  <body>
+    
+      <div class="model " dir="rtl">
+      
+        <div class="card p-4">
+          <div class="row">
+            <div class="col-lg-6 col-12 mb-3 mb-lg-0 colR">
+              <div class="box">
+                <div class="arrow" onclick="hideModel()" style="cursor: pointer;">
+                  <img src="./assets/img/modelArrow.png" alt="arrowImage">
+                </div>
+                <div class="text">
+                  <h3>تسجيل الدخول</h3>
+                  <p>من فضلك قم بإدخال البيانات المطلوبة منك لإستكمال تسجيل الدخول ومعرفة الدرجات والتقديرات الخاصة بك في الجامعة</p>
+                </div>
+                <div class="inputs">
+                  <input type="text" class="form-control mb-4" placeholder="الرقم القومي" id="ID">
+                  <input type="text" class="form-control mb-4" placeholder="الرقم الجامعي" id="universityID">
+                  <button class="btn btn-warning" id="collageBtn" onclick="showCollageModel()">تسجيل الآن</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 col-12 colL">
+                <div class="card-img">
+                  <img src="./assets/img/signInModel.png" alt="modelImage" class="img-fluid float-start">
+                </div>
+            </div>
+            
+          </div>
+        </div>
+    
+    </div>
+   <!--========================================-->
+   <div class="collage-model " dir="rtl">
+      
+    <div class="card p-4">
+      <div class="row">
+        <div class="col-lg-6 col-12 mb-3 mb-lg-0 colR">
+          <div class="box">
+            <div class="arrow" onclick="hideModel()" style="cursor: pointer;">
+              <img src="./assets/img/modelArrow.png" alt="arrowImage">
+            </div>
+            <div class="text">
+              <h3> الكلية والتخصص</h3>
+            </div>
+            <div class="inputs">
+              <select class="form-select mb-4" id="collageSeclection">
+                <option selected>اختر الكلية</option>
+                <option value="كلية علوم الحاسب">كلية علوم الحاسب</option>
+                <option value="كلية الهندسة">كلية الهندسة</option>
+                <option value="كلية الذكاء الاصطناعي">كلية الذكاء الاصطناعي</option>
+              </select>
+              <select class="form-select mb-4" id="departmentSelection">
+                <option selected>اختر القسم - التخصص</option>
+                <option value="تطوير البرمجيات">تطوير البرمجيات</option>
+                <option value="ذكاء اصطناعي">ذكاء اصطناعي</option>
+                <option value="شبكات">شبكات</option>
+              </select>
+              <input type="text" class="form-control mb-4" placeholder="رقم الجلوس" id="passcode">
+              <button class="btn btn-warning"> المتابعة</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-12 colL">
+            <div class="card-img">
+              <img src="./assets/img/signInModel.png" alt="modelImage" class="img-fluid float-start">
+            </div>
+        </div>
+        
+      </div>
+    </div>
+
+</div>
+    <div class="content"  dir="rtl">
+      <!--Navbar-->
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="./index.html"
+              ><img src="./assets/img/logo.png" alt="logo"
+            /></a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" href="./index.html">الرئيسية</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./news.html">الاخبار</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#services">خدماتنا</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#sectors">قطاعتنا</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#seminars">الندوات</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./about.html">من نحن</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#contact">اتصل بنا</a>
+                </li>
+              </ul>
+             
+              <div class="btnContainer me-auto">
+                
+                <button class="btn btn-warning" id="signBtn"> تسجيل الدخول</button>
+                <a href="#" class="btn btn-outline-primary">عضو جديد</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <!--Landing-->
+      <div class="container-fluid first">
+        
+        <div class="after">
+          <img src="./assets/img/Rectangle1.png" alt=" landing" />
+        </div>
+        <section class="container">
+          <div class="text">
+            <div class="box2">
+              <img src="./assets/img/Group 40.png" class="img1" alt="landing" />
+              <img src="./assets/img/Rectangle2.png" class="img2" alt="landing" />
+            </div>
+            <h1>SMART <span>GATE</span></h1>
+            <p>
+              الأفكار المبدعه والمبتكرة هي طريقنا لبناء علاقتنا مع العميل كفريق
+              عمل واحد بداية من العمل سوياً ثم التشغيل والإدارة نعمل معا ننجح
+              معا - وذلك عن طريق تقديم المنتجات والخدمات ذات الجوده العالية في
+              مجال تكنولوجيا المعلومات لتطوير البرامج والبنية التحتية اللازمة من
+              أجهزة وشبكات وبرمجيات لتطوير الأداء لدي العملاء
+            </p>
+            <div class="box1">
+              <button
+                class="btn btn-warning d-flex align-items-center"
+                id="knowMore"
+                title="knowMore"
+              >
+                تعرف علينا
+                <i class="fa-solid fa-arrow-left-long me-2"></i>
+              </button>
+              <img src="./assets/img/Group 39.png" alt="landing" />
+            </div>
+          </div>
+          <img src="./assets/img/858.png" alt="sectionImage" />
+          
+        </section>
+
+        <div class="before"></div>
+        <div class="mt-2 icone">
+          <a href="#news" aria-label="Read more about Seminole's new baby mayor"><i class="fa-solid fa-angles-down display-5 "></i></a>
+        </div>
+      </div>
+      <!--News Section-->
+      <section id="news">
+        <div class="container">
+          <div class="row">
+            <h2 class="main-title">اخر الاخبار</h2>
+          </div>
+          <div class="row">
+            <div class="col-12 col-lg-6 col-xl-4 mb-4 mb-lg-0">
+              <a href="#" style="text-decoration: none">
+                <div class="card w-100">
+                  <img src="./assets/img/news1.png" alt="news" />
+                  <div class="card-body">
+                    <div class="card-text">
+                      <small class="text-muted"
+                        >الأحد ، الموافق 29 / 01 / 2022</small
+                      >
+                    </div>
+                    <div class="card-text">
+                      <p>
+                        هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء
+                        لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص
+                        أو شكل توضع الفقرات في الصفحة التي يقرأها
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-12 col-lg-6 col-xl-4 mb-4 mb-lg-4">
+              <div class="card w-100">
+                <img src="./assets/img/news2.png" alt="news" />
+                <div class="card-body">
+                  <div class="card-text">
+                    <small class="text-muted"
+                      >الأحد ، الموافق 29 / 01 / 2022</small
+                    >
+                  </div>
+                  <div class="card-text">
+                    <p>
+                      هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة
+                      ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل
+                      توضع الفقرات في الصفحة التي يقرأها
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-6 col-xl-4">
+              <div class="card w-100">
+                <img src="./assets/img/news3.png" alt="news" />
+                <div class="card-body">
+                  <div class="card-text">
+                    <small class="text-muted"
+                      >الأحد ، الموافق 29 / 01 / 2022</small
+                    >
+                  </div>
+                  <div class="card-text">
+                    <p>
+                      هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة
+                      ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل
+                      توضع الفقرات في الصفحة التي يقرأها
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="btns text-center mt-4">
+            <button class="btn btn-warning ms-5" id="btn1" title="go">
+              <i class="fa-solid fa-arrow-right-long text-white fs-3"></i>
+            </button>
+            <button class="btn btn-outline-secondary text-center" style="cursor: pointer;" title="go">
+              <i class="fa-solid fa-arrow-left-long fs-3"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+      <!--Services Section-->
+      <section class="services" id="services">
+        <div class="container">
+          <div class="row">
+            <h2 class="main-title">خدماتنا</h2>
+          </div>
+          <div class="row">
+            <div class="col-12 col-xl-3 col-lg-6 mb-3 mb-xl-0">
+              <div class="card">
+                <div class="img1">
+                  <img src="./assets/img/serv1.png" alt="img"/>
+                </div>
+                <div class="card-body">
+                  <h2>إنشاء التطبيقات</h2>
+                  <p>
+                    نحن قادرون علي بناء مشاريع وتطبيقات برمجية لإدارة مشاريعك من
+                    خلال فريق متخصص والعمل بكفاءة عالية والأهتمام بجودة المنتج
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-3 col-lg-6 mb-3 mb-xl-0">
+              <div class="card">
+                <div class="img2">
+                  <img src="./assets/img/serv2.png" alt="img"/>
+                </div>
+                <div class="card-body">
+                  <h2>تصميم مواقع</h2>
+                  <p>
+                    إنشاء وتصميم المواقع بالشكل الذي يتناسب مع هويتك واهدافك
+                    بشكل احترافي لتحسين الشكل العام وقابلية المستخدم لدي موقعك
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-3 col-lg-6 mb-3 mb-xl-0">
+              <div class="card">
+                <div class="img3">
+                  <img src="./assets/img/serv3.png" alt="img"/>
+                </div>
+                <div class="card-body">
+                  <h2>تطوير المواقع</h2>
+                  <p>
+                    نعمل علي تحليل البيانات وبناءها والعمل علي إنشاء نظام برمجي
+                    يناسب حاجتك وإدارة مشروعك بشكل تفاعلي تمهيداً لإنطلاقة الي
+                    السوق
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-3 col-lg-6 mb-3 mb-xl-0">
+              <div class="card">
+                <div class="img4">
+                  <img src="./assets/img/serv4.png" alt="img"/>
+                </div>
+                <div class="card-body">
+                  <h2>تطبيقات الموبايل</h2>
+                  <p>
+                    نظراً لأهمية تطبيقات الموبايل وكثرة عدد مستخدميها بشكل لا
+                    غني عنه الآن نهتم بالعمل عليها دائماً بكافة التقنيات
+                    والأنظمة بمختلف أنواعها
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Your Grades section-->
+        <div class="grades mt-5">
+          <div class="container">
+            <div>
+              <button href="#" aria-label="Read more about Seminole's new baby mayor" style="border: none;border-radius: 15px;" id="gradeBtn"
+                ><img src="./assets/img/your grades.png" class="w-100" alt="img"
+              /></button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--sectors section-->
+      <section id="sectors" class="sectors">
+        <div class="container">
+          <div class="row">
+            <h2 class="main-title">قطاعتنا</h2>
+          </div>
+          <div class="row">
+            <div class="col-lg-4 col-md-6 col-12">
+              <div class="card crd1">
+                <div class="card-img">
+                  <img
+                    src="./assets/img/sector 1.png"
+                    alt="قطاع التعليم"
+                    class="img-fluid"
+                  />
+                </div>
+                <div class="card-title text-center py-3">قطاع التعليم</div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-12">
+              <div class="card crd2">
+                <div class="card-img">
+                  <img
+                    src="./assets/img/sector 2.png"
+                    alt="قطاع السيارات"
+                    class="img-fluid"
+                  />
+                </div>
+                <div class="card-title text-center py-3">قطاع السيارات</div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-12">
+              <div class="card crd3">
+                <div class="card-img">
+                  <img
+                    src="./assets/img/sector 3.png"
+                    alt="قطاع الزراعة"
+                    class="img-fluid"
+                  />
+                </div>
+                <div class="card-title text-center py-3">قطاع الزراعة</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--Seminars Section-->
+      <section class="seminars py-4" id="seminars">
+        <div class="container">
+          <div class="row">
+            <h2 class="main-title">الندوات</h2>
+          </div>
+          <div class="row">
+            <div class="col-12 col-lg-6 col-xl-4 mb-4 mb-lg-0">
+              <div class="card">
+                <div class="card-img">
+                  <img
+                    src="./assets/img/seminar 1.jpg"
+                    alt="Meeting"
+                    class="img-fluid"
+                  />
+                </div>
+                <div class="card-body">
+                  <div class="card-text">
+                    <h2>ندوة خاصة بالاعداد المهني</h2>
+                  </div>
+                  <div class="card-text">
+                    <small class="text-muted"
+                      >الأحد ، الموافق 29 / 01 / 2022</small
+                    >
+                    <button
+                      class="btn btn-warning d-flex align-items-center"
+                      id="signNow1"
+                      title="signNow"
+                    >
+                      التسجيل الآن
+                      <i class="fa-solid fa-arrow-left-long me-2"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-6 col-xl-4 mb-4 mb-lg-4">
+              <div class="card">
+                <div class="card-img">
+                  <img
+                    src="./assets/img/seminar 2.jpg"
+                    alt="seminar 2"
+                    class="img-fluid"
+                  />
+                </div>
+                <div class="card-body">
+                  <div class="card-text">
+                    <h2>ندوة خاصة بأخر تطورات التكنولوجيا وال...</h2>
+                  </div>
+                  <div class="card-text">
+                    <small class="text-muted"
+                      >الأحد ، الموافق 29 / 01 / 2022</small
+                    >
+                    <button
+                      class="btn btn-warning d-flex align-items-center"
+                      id="signNow2"
+                      title="signNow"
+                    >
+                      التسجيل الآن
+                      <i class="fa-solid fa-arrow-left-long me-2"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-6 col-xl-4">
+              <div class="card">
+                <div class="card-img">
+                  <img
+                    src="./assets/img/seminar 3.jpg"
+                    alt="seminar 3"
+                    class="img-fluid"
+                  />
+                </div>
+                <div class="card-body">
+                  <div class="card-text">
+                    <h2>ندوة خاصة عن مراحل إنشاء المواقع</h2>
+                  </div>
+                  <div class="card-text">
+                    <small class="text-muted"
+                      >الأحد ، الموافق 29 / 01 / 2022</small
+                    >
+                    <button
+                      class="btn btn-warning d-flex align-items-center"
+                      id="signNow3"
+                      title="signNow"
+                    >
+                      التسجيل الآن
+                      <i class="fa-solid fa-arrow-left-long me-2"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--Clients section-->
+      <section class="clients">
+        <div class="container">
+          <div class="row">
+            <h2 class="main-title">عملائنا المميزون</h2>
+          </div>
+
+          <div class="client">
+            <div class="cl">
+              <img src="./assets/img/client 1.png" alt="client 1" />
+            </div>
+            <div class="cl">
+              <img src="./assets/img/client 2.png" alt="client 2" />
+            </div>
+            <div class="cl">
+              <img src="./assets/img/client 3.png" alt="client 3" />
+            </div>
+            <div class="cl special">
+              <img src="./assets/img/client 1.png" alt="client 4" />
+            </div>
+            <div class="cl">
+              <img src="./assets/img/client 5.png" alt="client 5" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--Contact Section-->
+      <section id="contact">
+        <div class="container">
+          <div class="row">
+            <h2 class="main-title" style="color: #2B2B2B;"> تواصل معنا</h2>
+          </div>
+          <div class="row">
+            <div class="col col-6 mb-3 mb-lg-0">
+              <div class="mb-3">
+                <label for="formGroupExampleInput" class="form-label">أسمك أو أسم المؤسسة </label>
+                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="   أكتب الأسم هنا ..">
+              </div>
+              <div class="mb-3">
+                <label for="select" class="form-label">اختار الخدمة التي تريدها</label>
+                <select class="form-select" id="select" >
+                  <option selected>اختر الخدمة</option>
+                  <option value="إنشاء التطبيقات">إنشاء التطبيقات</option>
+                  <option value="تصميم مواقع">تصميم مواقع</option>
+                  <option value="تطوير المواقع">تطوير المواقع</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="phoneNumber" class="form-label">رقم الهاتف</label>
+                <input type="text" class="form-control" id="phoneNumber" placeholder="مثال: 010222411***">
+              </div>
+              <div class="mb-3">
+                <label for="mail" class="form-label"> البريد الإلكتروني</label>
+                <input type="email" class="form-control" id="mail" placeholder="مثال: name@gmail.com">
+              </div>
+              <div class="mb-3">
+                <label for="textArea" class="form-label">  اترك رسالة لنا</label>
+               
+                  <textarea class="form-control" placeholder="ضع رسالتك هنا" id="textArea" style="height: 100px"></textarea>
+                  
+                
+                
+              </div>
+              <div class="d-grid">
+                <button class="btn btn-outline-info" title="send" id="send">ارسال</button>
+              </div>
+            </div>
+            <div class="col col-6">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3452.5028684616527!2d31.347420623980337!3d30.079781316894806!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583e05ab78748d%3A0x4019605554703f14!2z2K3Ys9mGINin2YHZhNin2LfZiNmG2Iwg2YXYs9in2YPZhiDYp9mE2YXZh9mG2K_Ys9mK2YbYjCDZhdiv2YrZhtipINmG2LXYsdiMINmF2K3Yp9mB2LjYqSDYp9mE2YLYp9mH2LHYqeKArA!5e0!3m2!1sar!2seg!4v1702333989682!5m2!1sar!2seg"
+                style="width: 100%;height: 100%;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Location"
+              ></iframe
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer >
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 col-md-6 mb-lg-0 mb-5 text-center col-12">
+              <div class="footerLogo">
+                <div class="img">
+                  <img src="./assets/img/logo.png" alt="logo">
+                </div>
+                <address><i class="fa-solid fa-location-dot"></i>عقار رقم 9 شارع حسن افلاطون ارض الجولف – مدينة نصر</address>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-lg-0 mb-5 text-center col-12">
+              <div class="links">
+                <ul>
+                  <li><a href="./index.html">الرئيسية</a></li>
+                  <li><a href="./index.html#services">خدماتنا</a></li>
+                  <li><a href="./index.html#sectors">قطاعتنا</a></li>
+                  <li><a href="./index.html#seminars">الندوات</a></li>
+                  <li><a href="./about.html">من نحن</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-lg-0 mb-5 text-center col-12">
+              <h3 class="text-white"> تواصل معنا عبر</h3>
+              <div class="phone1">
+                <i class="fa-solid fa-mobile-screen-button"></i>  01069673344
+              </div>
+              <div class="phone2">
+                <i class="fa-solid fa-phone"></i> 0224199056
+              </div>
+              <div class="mail">
+                <i class="fa-solid fa-envelope"></i> info@smart-gate.net
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-lg-0 mb-5 text-center col-12">
+              <h3 class="text-white mb-3">تابعنا عبر</h3>
+              <div class="social">
+                <i class="fa-brands fa-youtube"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-facebook"></i>
+              </div>
+                <div class="con">
+                  <input type="text" class="form-control" placeholder="بريدك الإلكتروني" id="subscribe" >
+                <button class="btn btn-warning w-100">أشترك الآن</button>
+                </div>
+            </div>
+            
+          </div>
+        </div>
+      </footer>
+      
+    </div>
+    <script src="./assets/vendors/bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>

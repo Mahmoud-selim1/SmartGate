@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <!--Bootstrap File-->
+    <link
+      rel="stylesheet"
+      href="./assets/vendors/bootstrap/css/bootstrap.min.css"
+    />
+    <!--font Awsome library-->
+    <link rel="stylesheet" href="./assets/vendors/fonts/all.min.css" />
+    <!--Css File-->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>News</title>
+    <link rel="icon" href="./assets/img/logo.png" type="image/x-icon">
+</head>
+<body>
+    <div class="collage-model " dir="rtl">
+      
+        <div class="card p-4">
+          <div class="row">
+            <div class="col-lg-6 col-12 mb-3 mb-lg-0 colR">
+              <div class="box">
+                <div class="arrow" onclick="hideModel()" style="cursor: pointer;">
+                  <img src="./assets/img/modelArrow.png" alt="arrowImage">
+                </div>
+                <div class="text">
+                  <h3> الكلية والتخصص</h3>
+                </div>
+                <div class="inputs">
+                  <select class="form-select mb-4" id="collageSeclection">
+                    <option selected>اختر الكلية</option>
+                    <option value="كلية علوم الحاسب">كلية علوم الحاسب</option>
+                    <option value="كلية الهندسة">كلية الهندسة</option>
+                    <option value="كلية الذكاء الاصطناعي">كلية الذكاء الاصطناعي</option>
+                  </select>
+                  <select class="form-select mb-4" id="departmentSelection">
+                    <option selected>اختر القسم - التخصص</option>
+                    <option value="تطوير البرمجيات">تطوير البرمجيات</option>
+                    <option value="ذكاء اصطناعي">ذكاء اصطناعي</option>
+                    <option value="شبكات">شبكات</option>
+                  </select>
+                  <input type="text" class="form-control mb-4" placeholder="رقم الجلوس" id="passcode">
+                  <button class="btn btn-warning"> المتابعة</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 col-12 colL">
+                <div class="card-img">
+                  <img src="./assets/img/signInModel.png" alt="modelImage" class="img-fluid float-start">
+                </div>
+            </div>
+            
+          </div>
+        </div>
+    
+    </div>
+    <div class="model " dir="rtl">
+      
+        <div class="card p-4">
+          <div class="row">
+            <div class="col-lg-6 col-12 mb-3 mb-lg-0 colR">
+              <div class="box">
+                <div class="arrow" onclick="hideModel()" style="cursor: pointer;">
+                  <img src="./assets/img/modelArrow.png" alt="arrowImage">
+                </div>
+                <div class="text">
+                  <h3>تسجيل الدخول</h3>
+                  <p>من فضلك قم بإدخال البيانات المطلوبة منك لإستكمال تسجيل الدخول ومعرفة الدرجات والتقديرات الخاصة بك في الجامعة</p>
+                </div>
+                <div class="inputs">
+                  <input type="text" class="form-control mb-4" placeholder="الرقم القومي" id="ID">
+                  <input type="text" class="form-control mb-4" placeholder="الرقم الجامعي" id="universityID">
+                  <button class="btn btn-warning" id="collageBtn" onclick="showCollageModel()">تسجيل الآن</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 col-12 colL">
+                <div class="card-img">
+                  <img src="./assets/img/signInModel.png" alt="modelImage" class="img-fluid float-start">
+                </div>
+            </div>
+            
+          </div>
+        </div>
+    
+    </div>
+    <div class="content" dir="rtl">
+        <!--Navbar-->
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="./index.html"
+              ><img src="./assets/img/logo.png" alt="logo"
+            /></a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link " href="./index.html">الرئيسية</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="./news.html">الاخبار</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./index.html#services">خدماتنا</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./index.html#sectors">قطاعتنا</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./index.html#seminars">الندوات</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./about.html">من نحن</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#contact">اتصل بنا</a>
+                </li>
+              </ul>
+              <div class="btnContainer me-auto">
+                <button href="#" class="btn btn-warning" id="signBtn">تسجيل الدخول</button>
+                <a href="#" class="btn btn-outline-primary">عضو جديد</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <!--News Section-->
+      <section class="mainNews">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9">
+                    <div class="card w-100 crd1">
+                        <img src="./assets/img/news1.png" alt="news" />
+                        <div class="card-body">
+                          <div class="card-text">
+                            <small class="text-muted"
+                              >الأحد ، الموافق 29 / 01 / 2022</small
+                            >
+                          </div>
+                          <div class="card-text">
+                            <p>
+                                هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها. ولذلك يتم استخدام طريقة لوريم إيبسوم لأنها تعطي توزيعاَ طبيعياَ -إلى حد ما- للأحرف عوضاً عن استخدام "هنا يوجد محتوى نصي، هنا يوجد محتوى نصي" فتجعلها تبدو (أي الأحرف) وكأنها نص مقروء. العديد من برامح النشر المكتبي وبرامح تحرير صفحات الويب تستخدم لوريم إيبسوم بشكل إفتراضي كنموذج عن النص، وإذا قمت بإدخال "Lorem Ipsum" في أي محرك بحث ستظهر العديد من المواقع الحديثة العهد في نتائج البحث. على مدى السنين ظهرت نسخ جديدة ومختلفة من نص لوريم إيبسوم، أحياناً عن طريق الصدفة، وأحياناً عن عمد كإدخال بعض العبارات الفكاهية إليها. هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر أو الكلمات العشوائية إلى النص. إن كنت تريد أن تستخدم نص لوريم إيبسوم ما، عليك أن تتحقق أولاً أن ليس هناك أي كلمات أو عبارات محرجة أو غير لائقة مخبأة في هذا النص. بينما تعمل جميع مولّدات نصوص لوريم إيبسوم على الإنترنت على إعادة تكرار مقاطع من نص لوريم إيبسوم نفسه عدة مرات بما تتطلبه الحاجة
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-lg-3 crd2">
+                    <h3>اخبار اخري</h3>
+                    
+                        <div class="card w-100 mb-4 ">
+                            <img src="./assets/img/mNews1.png" alt="news" />
+                            <div class="card-body">
+                              <div class="card-text">
+                                <small class="text-muted"
+                                  >الأحد ، الموافق 29 / 01 / 2022</small
+                                >
+                              </div>
+                              <div class="card-text">
+                                <p>
+                                    هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="card w-100 mb-4">
+                            <img src="./assets/img/mNews2.png" alt="news" />
+                            <div class="card-body">
+                              <div class="card-text">
+                                <small class="text-muted"
+                                  >الأحد ، الموافق 29 / 01 / 2022</small
+                                >
+                              </div>
+                              <div class="card-text">
+                                <p>
+                                    هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="card w-100">
+                            <img src="./assets/img/mNews3.png" alt="news" />
+                            <div class="card-body">
+                              <div class="card-text">
+                                <small class="text-muted"
+                                  >الأحد ، الموافق 29 / 01 / 2022</small
+                                >
+                              </div>
+                              <div class="card-text">
+                                <p>
+                                    هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+      </section>
+        <!--Footer-->
+        <footer >
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 col-md-6 mb-lg-0 mb-5 text-center col-12">
+              <div class="footerLogo">
+                <div class="img">
+                  <img src="./assets/img/logo.png" alt="logo">
+                </div>
+                <address><i class="fa-solid fa-location-dot"></i>عقار رقم 9 شارع حسن افلاطون ارض الجولف – مدينة نصر</address>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-lg-0 mb-5 text-center col-12">
+              <div class="links">
+                <ul>
+                  <li><a href="./index.html">الرئيسية</a></li>
+                  <li><a href="./index.html#services">خدماتنا</a></li>
+                  <li><a href="./index.html#sectors">قطاعتنا</a></li>
+                  <li><a href="./index.html#seminars">الندوات</a></li>
+                  <li><a href="./about.html">من نحن</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-lg-0 mb-5 text-center col-12">
+              <h3 class="text-white"> تواصل معنا عبر</h3>
+              <div class="phone1">
+                <i class="fa-solid fa-mobile-screen-button"></i>  01069673344
+              </div>
+              <div class="phone2">
+                <i class="fa-solid fa-phone"></i> 0224199056
+              </div>
+              <div class="mail">
+                <i class="fa-solid fa-envelope"></i> info@smart-gate.net
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-lg-0 mb-5 text-center col-12">
+              <h3 class="text-white mb-3">تابعنا عبر</h3>
+              <div class="social">
+                <i class="fa-brands fa-youtube"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-facebook"></i>
+              </div>
+                <div class="con">
+                  <input type="text" class="form-control" placeholder="بريدك الإلكتروني" id="subscribe" >
+                <button class="btn btn-warning w-100">أشترك الآن</button>
+                </div>
+            </div>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    
+    <script src="./assets/vendors/bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
+
+</body>
+</html>
