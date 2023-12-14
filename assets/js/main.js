@@ -18,9 +18,13 @@ let hideModel=()=> {
     collageModel.style.display= 'none';
 };
 signBtn.addEventListener("click",showModel);
-
+if(location.pathname=='/index.html') {
     let gradeBtn = document.getElementById("gradeBtn");
     gradeBtn.addEventListener("click",showModel);
+}
+    
+let spinner = document.querySelector(".spinner")
 
-
-
+window.onload=()=> {
+    spinner.style.display='none'
+}

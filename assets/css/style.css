@@ -18,6 +18,19 @@ body {
 a {
     text-decoration: none;
 }
+.spinner {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #edece9;
+    z-index: 2;
+}
+.spinner img {
+   max-width: 100%;
+}
 .navbar {
     margin-bottom: 35px;
 }
