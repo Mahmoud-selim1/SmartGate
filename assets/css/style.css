@@ -25,11 +25,11 @@ a {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background: #edece9;
+    background: white;
     z-index: 2;
 }
 .spinner img {
-   max-width: 100%;
+   width: 75px;
 }
 .navbar {
     margin-bottom: 35px;
@@ -802,7 +802,7 @@ footer .con button {
     line-height: 3;
 }
  }
-/*=========================================*/
+/*==================Team=======================*/
 .team {
     background-color: #F8F8F8;
 }
@@ -837,7 +837,7 @@ footer .con button {
     color: #707070;
     font-size: 16px;
 }
-/*==============================================*/
+/*====================Model==========================*/
 .model {
     position: fixed;
     width: 100%;
@@ -890,7 +890,7 @@ footer .con button {
     caret-color: #2196F3;
     box-shadow: 0px 1px 2px 1px #00000029;
 }
-/*==========================================*/
+/*=====================collage-model=====================*/
 .collage-model {
     position: fixed;
     width: 100%;
@@ -944,4 +944,98 @@ footer .con button {
 .collage-model .card .inputs  .form-select {
     background-position: left 0.75rem center;
     position: relative;
+}
+/*===================Grades===============================*/
+header.gradeHeader {
+    background-color: #FFFFFF;
+}
+@media (max-width:768px) {
+    header.gradeHeader {
+        flex-direction: column;
+        gap: 40px;
+    }
+}
+header.gradeHeader .box1 .text h4 {
+    color: #000000;
+    font-size: 16px;
+    font-weight: 600;
+}
+header.gradeHeader .box1 .text p {
+    color: #979797;
+    font-size: 16px;
+}
+@media (max-width:992px) {
+    header.gradeHeader .box1 {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+header.gradeHeader .box1 .text small {
+    color: #979797;
+    display: block;
+    margin-bottom: -10px;
+}
+header.gradeHeader .box2 .btn1 {
+    background-color: #3485B9;
+}
+header.gradeHeader .box2 .btn1:hover {
+    background-color: #0d6efd;
+}
+header.gradeHeader .box2 .btn2 {
+    background-color: #dc3545;
+}
+header.gradeHeader .box2 .btn2:hover {
+    background-color: #EF1D1D;
+}
+/* informatin of student */
+@media (max-width:768px) {
+    .info .head {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
+.info .head h4 {
+    color: #000000;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.info .head h5 {
+    color: #000000;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.info .crds {
+    gap: 40px;
+}
+@media (max-width:768px) {
+    .info .crds {
+        flex-direction: column;
+    }
+}
+.info .crds .card {
+    border: none;
+}
+.info .crds .card h5 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 9rem;
+}
+.info .crds .card span {
+    font-size: 14px;
+}
+@media (max-width:540px) {
+    .info .head h4 {
+        font-size: 20px;
+    }
+    .info .head h5 {
+        font-size: 15px;
+    }
+    .info .crds .card h5 {
+        font-size: 13px;
+    }
+    .info .crds .card span {
+        font-size: 11px;
+    }
 }

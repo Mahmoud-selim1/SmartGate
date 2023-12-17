@@ -22,9 +22,12 @@ if(location.pathname=='/index.html') {
     let gradeBtn = document.getElementById("gradeBtn");
     gradeBtn.addEventListener("click",showModel);
 }
-    
+// Spinner
 let spinner = document.querySelector(".spinner")
 
 window.onload=()=> {
     spinner.style.display='none'
+}
+let goToGrade=()=> {
+    window.location.href='./grade.html'
 }
