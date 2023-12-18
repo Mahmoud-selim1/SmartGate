@@ -31,3 +31,13 @@ window.onload=()=> {
 let goToGrade=()=> {
     window.location.href='./grade.html'
 }
+let upBtn = document.querySelector(".up-btn")
+window.onscroll=()=> {
+    let scrollNumber=window.scrollY;
+    if(scrollNumber>=400) {
+        upBtn.style.display='block'
+    }
+    else {
+        upBtn.style.display='none'
+    }
+}
