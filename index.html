@@ -22,6 +22,53 @@
     <title>Smart Gate</title>
   </head>
   <body>
+    
+   
+    <!--Register Model-->
+    <div class="register" dir="rtl">
+      <div class="card p-4">
+        <div class="row">
+          <div class="col-lg-6 col-12 mb-3 mb-lg-0 colR">
+            <div class="box">
+              <div class="arrow" onclick="hideRegisterModel()" style="cursor: pointer;">
+                <img src="./assets/img/modelArrow.png" alt="arrowImage">
+              </div>
+              <div class="text">
+                <h3>التسجيل في الندوة</h3>
+                <p>من فضلك قم بإدخال البيانات المطلوبة منك وسوف يتم إرسال تفاصيل الندوة لك وموعدها علي بريدك الإلكتروني ورقم تذكرة الحضور الخاصة بك</p>
+              </div>
+              <div class="inputs">
+                <input type="text" class="form-control mb-4" placeholder="الاسم بالكامل" id="fullName">
+                <input type="text" class="form-control mb-4" placeholder="رقم الهاتف" id="phoneNumber">
+                <input type="email" placeholder="بريدك الالكتروني" id="email" class="form-control mb-4">
+                <button class="btn btn-warning" onclick="showAcceptModel()"> تسجيل الدخول</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-12 colL">
+              <div class="card-img">
+                <img src="./assets/img/signInModel.png" alt="modelImage" class="img-fluid float-start">
+              </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    <!--Accept message after register-->
+    <div class="accept" dir="rtl">
+      <div class="card">
+        <div class="card-img">
+          <img src="./assets/img/check.gif" alt="checkImg">
+        </div>
+        <div class="text">
+          <h4>تم تسجيل الدخول بنجاح</h4>
+          <p>من فضلك قم بمراجعة البريد الوارد لديك علي بريدك الإلكتروني الخاص بك لمعرفة التفاصيل الخاصة بالندوة وتذكرة الحضور والميعاد</p>
+        </div>
+        <div class="btns">
+          <button class="btn btn-warning" onclick="hideAcceptModel()">حسنا فهمت</button>
+        </div>
+      </div>
+    </div>
     <div class="spinner">
       <img src="./assets/img/spinner.gif" alt="spinner">
     </div>
@@ -624,5 +671,6 @@
     <script src="./assets/vendors/bootstrap/js/bootstrap.bundle.js"></script>
     <script src="./assets/js/main.js"></script>
     <script src="./assets/js/grad.js"></script>
+    <script src="./assets/js/seminars.js"></script>
   </body>
 </html>
