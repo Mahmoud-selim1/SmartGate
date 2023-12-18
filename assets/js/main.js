@@ -1,4 +1,4 @@
-let signBtn = document.getElementById("signBtn");
+
 let model = document.querySelector(".model");
 
 let collageModel = document.querySelector(".collage-model");
@@ -17,11 +17,7 @@ let hideModel=()=> {
     model.style.display='none';
     collageModel.style.display= 'none';
 };
-signBtn.addEventListener("click",showModel);
-if(location.pathname=='/index.html') {
-    let gradeBtn = document.getElementById("gradeBtn");
-    gradeBtn.addEventListener("click",showModel);
-}
+
 // Spinner
 let spinner = document.querySelector(".spinner")
 
